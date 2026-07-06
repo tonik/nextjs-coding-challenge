@@ -17,11 +17,31 @@ We expect that it will take ~3 hours to get meaningful results in this challenge
 - Using web standards and best practices.
 - **Document your choices**. Whenever you're complete with this project, please document the choices that you've made in your project `README`.
 - Time for this challenge is very limited so pick your battles and keep a startup mindset. We are not expecting a completed solution, but we are looking for a solution that is well thought out and future-proof.
-  - You can use any ready lib, starterkit or tool that will help you get the job done. If you are going to use AI for generating large amounts of code please document what parts were generated and what were written by you.
+  - You can use any ready lib, starterkit or tool that will help you get the job done. AI tools and coding agents are explicitly welcome — see [AI usage & process transparency](#ai-usage--process-transparency) for what we ask in return.
+- AI tools make it easy to generate a lot of code, so feature count impresses us less than a coherent, playable game and decisions you can defend. We weigh judgment over volume.
+
+## AI usage & process transparency
+
+We assume you will use AI tools — that's a skill we want to see, not something to hide. What we ask for:
+
+- **Session dumps or replays.** Export or link the sessions from the tools you used (e.g. opencode/Claude Code session exports, Cursor chat exports, shared agent threads). We want to see how you steer an agent: how you decompose the problem, what context you provide, and how you react when it goes off track.
+- **Commit your agent configuration.** If you created `AGENTS.md`/`CLAUDE.md`, rules files, custom commands, skills, or MCP setup for this project, include them in the repository. How you configure your tools is part of your craft.
+- **Disclose the split.** In your `README`, briefly note which parts were AI-generated and accepted mostly as-is, and which you wrote or heavily reworked.
+- **Scrub secrets.** Make sure session dumps and configs contain no API keys, tokens or personal data before submitting.
+
+We treat these artifacts as conversation starters, not as surveillance — expect to walk through them with us in the follow-up interview.
 
 ## How to submit?
 
-You can do this however you see fit - you can email us a tarball, a pointer to download your code or just a link to a source control repository. Make sure your submission includes a small `README`, documenting any assumptions, simplifications and/or choices you made, as well as a short description of how to run the code and/or tests. Finally, to help us review your code, please split your commit history into sensible chunks. Bonus points if you can include live demo link.
+You can do this however you see fit - you can email us a tarball, a pointer to download your code or just a link to a source control repository. To help us review your code, please split your commit history into sensible chunks. Bonus points if you can include a live demo link.
+
+Your submission should include:
+
+- A small `README` documenting any assumptions and simplifications you made, and a short description of how to run the code and/or tests.
+- **A short decision log**: pick 3–5 key technical decisions (e.g. realtime transport, persistence, state management), and for each note the alternatives you considered, why you chose what you chose, and what you would revisit at scale.
+- **A note on verification**: how did you verify what was built — especially the AI-generated parts? Tests, manual playtesting with multiple browsers, something else?
+- Your AI process artifacts (see [AI usage & process transparency](#ai-usage--process-transparency)).
+- An `.env.example` if the app needs environment variables. Never commit real secrets.
 
 ## Challenge
 
@@ -31,7 +51,7 @@ Develop an application that is a real-time writing competition ✍ platform️ (
 | :----------------- | :---------- | ---------------: | -------: |
 | Lazy fox jumped \| | super typer |               30 |     0.97 |
 
-Please add some of the following features, the more the better. We don't expect all of them to be implemented in the given time frame but final solution should be fun to play.
+Please add some of the following features. We don't expect all of them to be implemented in the given time frame — a smaller set of features that works well and is fun to play beats a long list of half-working ones.
 
 1. Real-time updated results and player stats. When a player joins a competition he/she should be shown in the main player's table with other currently playing contestants. The table should show live data, for example "Live progress" column should show the currently typed-in text of the given player.
 1. The game should consist of fixed-time rounds. In each round all currently playing people are presented with one sentence to type in. After the round time passes players are presented with the new sentence.
@@ -63,10 +83,10 @@ There are no strict requirements for sentence source except that sentences shoul
    For any value of X, it is up to you, we intentionally leave the problem a little open-ended and will leave it up to you to provide us with what you see as important. Just remember the rough time frame of the project. If it is going to take you a couple of days, it isn't essential.
 
 3. _Something is ambiguous, and I don't know what to do?_
-   The first thing is: don't get stuck. We really don't want to trip you up intentionally, we are just attempting to see how you approach problems. That said, there are intentional ambiguities in the specifications, mainly to see how you fill in those gaps, and how you make design choices.
+   The first thing is: don't get stuck. We really don't want to trip you up intentionally, we are just attempting to see how you approach problems. That said, the ambiguity is deliberate and part of the exercise: how you notice gaps, resolve them, and defend the resulting choices matters as much as the code itself. Make a call, write it down, move on.
 
 ## What's next?
 
-Once you're done, send us a confirmation email. After you submit your code, we will contact you to discuss next steps.
+Once you're done, send us a confirmation email. After you submit your code, we will invite you to a follow-up interview. Expect to walk us through your solution and your AI sessions, defend your decisions, and possibly make a small live change using your own tooling and setup.
 
 Good luck! 💪
